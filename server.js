@@ -6,6 +6,7 @@ const server  = express();
 server.set('port', process.env.PORT || 10001);
 
 // route
+server.use('/mrxm', express.static(path.join(__dirname, './mrxm')));
 server.use('/fonts', express.static(path.join(__dirname, './fonts')));
 server.use('/css', express.static(path.join(__dirname, './css')));
 server.use('/js', express.static(path.join(__dirname, './js')));
